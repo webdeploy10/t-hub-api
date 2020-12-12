@@ -23,14 +23,12 @@ const comentSchema = new Schema({
         required: true,
         unique: false, 
         trim: false,
-        minlength: 11
     }, 
     coment:{
         type: String,
         required: true,
         unique: false, 
         trim: false,
-        minlength: 11
     }
 
 },{
