@@ -20,5 +20,9 @@ router.route('/add').post((req,res) =>{
     .catch(err=>{res.status(400).json('Error: '+err); console.log("Erro na insercao dos dados"+err)});
     
 });
+// Im doing this so that he can make the POST request
+router.route('/add').options((req,res) =>{
+    res.sendStatus(200)
+})
 
 module.exports = router;
