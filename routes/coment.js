@@ -10,10 +10,9 @@ router.route('/').get((req,res) =>{
 
 router.route('/add').post((req,res) =>{
 
-    console.log(req.body);
-    const comenter_name = req.body.data.comenter_name;
-    const comenter_email = req.body.data.comenter_email;
-    const coment = req.body.data.coment;
+    const comenter_name = req.body.comenter_name;
+    const comenter_email = req.body.comenter_email;
+    const coment = req.body.coment;
     const newComent = new Coment({comenter_name, comenter_email, coment});
     
     newComent.save()
