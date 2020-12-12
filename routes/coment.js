@@ -8,14 +8,18 @@ router.route('/').get((req,res) =>{
 });
 
 router.route('/add').post((req,res) =>{
+
+    res.json(req.body);
+    /*
     const comenter_name = req.body.comenter_name;
     const comenter_email = req.body.comenter_email;
     const coment = req.body.coment;
     const newComent = new Coment({comenter_name, comenter_email, coment});
-
+    /*
     newComent.save()
     .then(()=>{res.json('Coment added!'); console.log("Dados inseridos com sucesso")})
     .catch(err=>{res.status(400).json('Error: '+err); console.log("Erro na insercao dos dados"+err)});
+    */
 });
 
 module.exports = router;
