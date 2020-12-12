@@ -9,7 +9,7 @@ router.route('/').get((req,res) =>{
 
 router.route('/add').post((req,res) =>{
 
-    res.json(req+" SALVE CARAIO");
+    res.json(req);
     /*
     const comenter_name = req.body.comenter_name;
     const comenter_email = req.body.comenter_email;
