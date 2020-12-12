@@ -22,5 +22,8 @@
     "express": "^4.17.1",
     "firebase": "^8.1.2",
     "mongoose": "^5.11.4"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.8.5"
   }
 }
