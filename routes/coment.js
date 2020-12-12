@@ -7,6 +7,7 @@ router.route('/').get((req,res) =>{
     .catch(err=>res.status(400).json('error: '+err));
 });
 
+
 router.route('/add').post((req,res) =>{
 
     console.log(req.body);
