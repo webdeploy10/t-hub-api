@@ -12,6 +12,7 @@ router.route('/add').post((req,res) =>{
 
     const comenter_name = req.body.comenter_name;
     const comenter_email = req.body.comenter_email;
+    //a
     const coment = req.body.coment;
     const newComent = new Coment({comenter_name, comenter_email, coment});
     
