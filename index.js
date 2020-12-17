@@ -22,8 +22,10 @@ const uri = process.env.ATLAS_URI;
         })
 
 const comentRouter = require('./routes/coment');
+const videoRouter = require('./routes/answer');
 
 app.use('/coment', comentRouter);
+app.use('/answer', videoRouter);
 
 app.listen(port, () =>{
     console.log(`Server running on port: ${port}`);
