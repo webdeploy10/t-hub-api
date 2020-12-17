@@ -24,7 +24,8 @@ router.route('/add').post((req,res) =>{
 
 // Im doing this so that he can make the POST request
 router.route('/add').options((req,res) =>{
-    res.sendStatus(200)
+    res.sendStatus({"Access-Control-Allow-Origin":"*"})
+    
 })
 
 module.exports = router;
