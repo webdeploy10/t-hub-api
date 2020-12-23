@@ -7,6 +7,9 @@ router.route('/').get((req,res) =>{
     .catch(err=>res.status(400).json('error: '+err));
 });
 
+router.route('/check').get((req,res)=>{
+    res.json("true");
+})
 
 router.route('/add').post((req,res) =>{
 
@@ -24,7 +27,7 @@ router.route('/add').post((req,res) =>{
 
 // Im doing this so that he can make the POST request
 router.route('/add').options((req,res) =>{
-    res.sendStatus({"Access-Control-Allow-Origin":"*"})
+    //res.sendStatus({"Access-Control-Allow-Origin":"*"})
     
 })
 
