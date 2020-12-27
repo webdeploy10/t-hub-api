@@ -9,24 +9,22 @@ const port = process.env.PORT || 5000;
 
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true})); 
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
 const uri = process.env.ATLAS_URI;
-        mongoose.connect(uri,{useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology: true});
-        const connection = mongoose.connection;
-        connection.once('open', ()=>{
-            console.log("MongoDB Connection stablished successfully");
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log("MongoDB Connection stablished successfully");
 
-        })
+})
 
 const comentRouter = require('./routes/coment');
-const videoRouter = require('./routes/answer');
 
 app.use('/coment', comentRouter);
-app.use('/answer', videoRouter);
 
-app.listen(port, () =>{
+app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });
