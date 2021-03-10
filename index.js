@@ -22,8 +22,10 @@ connection.once('open', () => {
 })
 
 const comentRouter = require('./routes/coment');
+const conexionRouter = require('./routes/conexions');
 
 app.use('/coment', comentRouter);
+app.use('/conexions', conexionRouter);
 
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
